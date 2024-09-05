@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using testAPI.Attributes;
-using testAPI.Helpers;
 using testAPI.Options;
 using testAPI.Repositories;
 using testAPI.Repositories.Impl;
@@ -26,7 +25,7 @@ namespace testAPI
 
             services.AddSingleton<IStudentRepository, StudentRepositoryInMemory>();
             services.AddSingleton<IUserRepository, UserRepositoryInMemory>();
-            
+
 
             services.AddMvc(options =>
             {
